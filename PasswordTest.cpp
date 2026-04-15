@@ -21,30 +21,37 @@ TEST(PasswordTest, single_letter_password)
 	ASSERT_EQ(1, actual);
 }
 
-TEST(PasswordTest, single_letter_password)
+TEST(PasswordTest, one_char_one_unique)
 {
 	Password my_password;
-	int actual = unique_characters("a");
+	int actual = my_password.unique_characters("a");
 	ASSERT_EQ(1, actual);
 }
 
-TEST(PasswordTest, single_letter_password)
+TEST(PasswordTest, two_char_two_unique)
 {
 	Password my_password;
-	int actual = unique_characters("ab");
+	int actual = my_password.unique_characters("ab");
 	ASSERT_EQ(2, actual);
 }
 
-TEST(PasswordTest, single_letter_password)
+TEST(PasswordTest, three_char_two_unique)
 {
 	Password my_password;
-	int actual = unique_characters("aba");
+	int actual = my_password.unique_characters("aba");
 	ASSERT_EQ(2, actual);
 }
 
-TEST(PasswordTest, single_letter_password)
+TEST(PasswordTest, six_char_four_unique)
 {
 	Password my_password;
-	int actual = unique_characters("abABab");
+	int actual = my_password.unique_characters("abABab");
 	ASSERT_EQ(4, actual);
+}
+
+TEST(PasswordTest, empty_string)
+{
+	Password my_password;
+	int actual = my_password.unique_characters("");
+	ASSERT_EQ(0, actual);
 }
