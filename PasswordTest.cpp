@@ -20,3 +20,31 @@ TEST(PasswordTest, single_letter_password)
 	int actual = my_password.count_leading_characters("Z");
 	ASSERT_EQ(1, actual);
 }
+
+TEST(PasswordTest, single_letter_password)
+{
+	Password my_password;
+	int actual = unique_characters("a");
+	ASSERT_EQ(1, actual);
+}
+
+TEST(PasswordTest, single_letter_password)
+{
+	Password my_password;
+	int actual = unique_characters("ab");
+	ASSERT_EQ(2, actual);
+}
+
+TEST(PasswordTest, single_letter_password)
+{
+	Password my_password;
+	int actual = unique_characters("aba");
+	ASSERT_EQ(2, actual);
+}
+
+TEST(PasswordTest, single_letter_password)
+{
+	Password my_password;
+	int actual = unique_characters("abABab");
+	ASSERT_EQ(4, actual);
+}

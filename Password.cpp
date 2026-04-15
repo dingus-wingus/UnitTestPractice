@@ -19,6 +19,11 @@ int Password::count_leading_characters(string phrase){
   return repetition;
 }
 
+/* Receives a string and returns a count of how many case-sensitive unique characters there are. If there are duplicate instances of the same character it should only count as a single character. Even if characters look similar, as long as they have distinct ASCII values, they should qualify as unique characters. 
+*/
+unsigned int Password::unique_characters(string phrase){
+}
+
 /*
   receives a string and returns whether it has both at least one upper-case
   letter and at least one lower-case letter

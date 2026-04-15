@@ -18,7 +18,8 @@ public:
   'z' and any ASCII characters are allowed.
   */
   int count_leading_characters(string word);
-  
+ 
+  unsigned int unique_characters(string phrase);
 
   /*
   receives a string and returns whether it has both at least one upper-case
